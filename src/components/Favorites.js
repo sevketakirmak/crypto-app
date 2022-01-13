@@ -42,11 +42,11 @@ class Favorites extends React.Component {
             const price = numeral(coin[0].current_price).format('($0,0)');
             const volume = numeral(coin[0].total_volume).format('($0,0)');
             return (<tr key={coin[0].id}>
-                <td>{coin[0].market_cap_rank}</td>
+                <td className="d-none d-sm-table-cell">{coin[0].market_cap_rank}</td>
                 <td><img src={coin[0].image} alt={coin[0].id} /> {coin[0].id} - <span>{coin[0].symbol}</span></td>
                 <td>{price}</td>
-                <td>{coin[0].market_cap_change_percentage_24h?coin[0].market_cap_change_percentage_24h.toFixed(2):'NULL'}%</td>
-                <td>{volume}</td>
+                <td className="d-none d-md-table-cell">{coin[0].market_cap_change_percentage_24h?coin[0].market_cap_change_percentage_24h.toFixed(2):'NULL'}%</td>
+                <td className="d-none d-md-table-cell">{volume}</td>
                 <td><i onClick={(e) => {
                     if(this.props.favorites.includes(coin[0].id)){
                         e.target.style.color = "#212529";
@@ -65,11 +65,11 @@ class Favorites extends React.Component {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th className="d-none d-sm-table-cell" scope="col">#</th>
                             <th scope="col">Coin</th>
                             <th scope="col">Price</th>
-                            <th scope="col">1h (Percentage)</th>
-                            <th scope="col">24h Volume</th>
+                            <th className="d-none d-md-table-cell" scope="col">1h (Percentage)</th>
+                            <th className="d-none d-md-table-cell" scope="col">24h Volume</th>
                             <th scope="col">Favorite</th>
                         </tr>
                     </thead>

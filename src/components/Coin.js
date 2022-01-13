@@ -46,7 +46,7 @@ class Coin extends React.Component {
             const price = numeral(coin.current_price).format('($0,0)');
             const volume = numeral(coin.total_volume).format('($0,0)');
             return (<tr key={coin.id}>
-                <td>{coin.market_cap_rank}</td>
+                <td className="d-none d-sm-table-cell">{coin.market_cap_rank}</td>
                 <td><Link to="/coin-detail" onClick={()=> {this.props.addCoin(coin.id)}}><img src={coin.image} alt={coin.id} /> {coin.id} - <span>{coin.symbol}</span></Link></td>
                 <td>{price}</td>
                 <td className="d-none d-md-table-cell">{coin.market_cap_change_percentage_24h?coin.market_cap_change_percentage_24h.toFixed(2):'NULL'}%</td>
@@ -72,7 +72,7 @@ class Coin extends React.Component {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th className="d-none d-sm-table-cell" scope="col">#</th>
                             <th scope="col">Coin</th>
                             <th scope="col">Price</th>
                             <th className="d-none d-md-table-cell" scope="col">1h (Percentage)</th>
