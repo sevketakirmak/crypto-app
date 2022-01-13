@@ -78,7 +78,7 @@ class CoinDetail extends PureComponent {
                             <li className="list-group-item">Market Cap Rank: #{this.props.coinDetail[0] ? this.props.coinDetail[0].market_cap_rank : ''}</li>
                         </ul>
                     </div>
-                    <div className="btn-group d-flex justify-content-end mb-2" role="group" aria-label="First group">
+                    <div className="btn-group d-flex justify-content-end mt-3" role="group" aria-label="First group">
                         <button type="button" className="btn btn-outline-secondary" value={1} onClick={(e)=>{this.props.getChart(this.props.selectCoin, e.target.value)}}>24H</button>
                         <button type="button" className="btn btn-outline-secondary" value={7} onClick={(e)=>{this.props.getChart(this.props.selectCoin, e.target.value)}}>7D</button>
                         <button type="button" className="btn btn-outline-secondary" value={14} onClick={(e)=>{this.props.getChart(this.props.selectCoin, e.target.value)}}>14D</button>

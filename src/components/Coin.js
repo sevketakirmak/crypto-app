@@ -49,8 +49,8 @@ class Coin extends React.Component {
                 <td>{coin.market_cap_rank}</td>
                 <td><Link to="/coin-detail" onClick={()=> {this.props.addCoin(coin.id)}}><img src={coin.image} alt={coin.id} /> {coin.id} - <span>{coin.symbol}</span></Link></td>
                 <td>{price}</td>
-                <td>{coin.market_cap_change_percentage_24h?coin.market_cap_change_percentage_24h.toFixed(2):'NULL'}%</td>
-                <td>{volume}</td>
+                <td className="d-none d-md-table-cell">{coin.market_cap_change_percentage_24h?coin.market_cap_change_percentage_24h.toFixed(2):'NULL'}%</td>
+                <td className="d-none d-md-table-cell">{volume}</td>
                 <td><i onClick={(e) => {
                     if(this.props.favorites.includes(coin.id)){
                         e.target.style.color = "#212529";
@@ -75,8 +75,8 @@ class Coin extends React.Component {
                             <th scope="col">#</th>
                             <th scope="col">Coin</th>
                             <th scope="col">Price</th>
-                            <th scope="col">1h (Percentage)</th>
-                            <th scope="col">24h Volume</th>
+                            <th className="d-none d-md-table-cell" scope="col">1h (Percentage)</th>
+                            <th className="d-none d-md-table-cell" scope="col">24h Volume</th>
                             <th scope="col">Favorite</th>
                         </tr>
                     </thead>
