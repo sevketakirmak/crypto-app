@@ -1,3 +1,17 @@
+## Demo
+[Crypto-App Demo](https://crypto-app-github.herokuapp.com/)
+
+## Tools
+Key tools used in this React project are:
+
+| Tool             | Description   |
+| :-------------:|--------------|
+| [React](http://facebook.github.io/react/index.html) | A JavaScript library for building user interfaces |
+| [Bootstrap](http://getbootstrap.com/) | Build responsive, mobile-first projects on the web with the world's most popular front-end component library |
+| [Recharts](https://recharts.org/en-US) | A composable charting library built on React components |
+| [React Redux](https://react-redux.js.org/) | Official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state. |
+| [React Router](https://v5.reactrouter.com/) | Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering--so take your pick! |
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
